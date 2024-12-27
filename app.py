@@ -108,7 +108,7 @@ def generate_montage(
     final_video = CompositeVideoClip(placed_clips)
 
     # The final duration should be at least as long as the audio, or the last subclip
-    final_duration = max(final_video.duration, audio_clip.duration)
+    final_duration = final_video.duration
     final_video = final_video.with_duration(final_duration)
 
     # Attach the audio
